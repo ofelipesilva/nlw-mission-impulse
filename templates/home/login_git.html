@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load socialaccount %}
+{% load account %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        Hi: {% user_display user %}
+    {% else %}
+        <p>Fazer login com <a href="{% provider_login_url 'github' %}">GitHub</a></p>
+    {% endif %}
+{% endblock %}
