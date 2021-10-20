@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     # local
+    'nlw.apps.NlwConfig',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,7 @@ SITE_ID = 1
 
 GITHUB_CLIENT_SECRET = '6bcb1747d5f3aba1199de92db633dfcaedecc32d'
 GITHUB_CLIENT_ID = '82bde8dd9be228a1e141'
+
+
+# Email Backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
